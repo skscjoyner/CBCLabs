@@ -1,6 +1,6 @@
 /*
  *
- * Home
+ * Home index.js
  *
  */
 
@@ -9,6 +9,7 @@ import Helmet from 'react-helmet';
 
 import './style.css';
 import './styleM.css';
+
 import Grid from 'components/Grid';
 
 export default class Home extends React.PureComponent {
