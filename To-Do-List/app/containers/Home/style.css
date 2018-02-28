@@ -1,0 +1,52 @@
+/* Home Styles */
+
+.container {
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.listItem {
+  background: #CCCCCC;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  font-variant: small-caps;
+}
+
+.inputContainer {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoInput {
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 1.1em;
+}
+
+.todoButton {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: #00CCFF;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.todoButton:hover {
+  background: #00DDFF;
+}
+
+.todoButton {
+  background: #00AAFF
+}
