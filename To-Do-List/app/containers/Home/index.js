@@ -10,7 +10,6 @@ import Helmet from 'react-helmet';
 import './style.css';
 import './styleM.css';
 
-
 export default class Home extends React.PureComponent {
   constructor() {
     super();
@@ -19,6 +18,10 @@ export default class Home extends React.PureComponent {
       inputItem:""
     }
   };
+
+  componentWillMount() {
+    this.getTasks();
+  }
 
   handleItem = (event) => {
     this.setState({
@@ -38,7 +41,42 @@ export default class Home extends React.PureComponent {
         inputItem:""
       })
     }
-  }
+  };
+
+  getTasks = () => {
+    fetch('http://localhost:8000/api/getTasks', {
+      method:'GET'
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      this.setState({
+        listItems:json.tasks
+      })
+    }.bind(this))
+  };
+
+  storeTask = () => {
+    let data = new FormData();
+    data.append('taskContent', this.state.inputItem);
+
+    fetch('http://localhost:8000/api/storeTask', {
+      method: 'POST',
+      body:data
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then (function(json) {
+      let listItems = this.state.listItems;
+      listItems.push(json.task);
+      this.setState({
+        listItems:listItems
+      })
+      this.forceUpdate();
+    }.bind(this))
+  };
 
   render() {
     return (
@@ -47,12 +85,12 @@ export default class Home extends React.PureComponent {
 
         <div className="inputContainer">
           <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem}/>
-          <input type="submit" value="Add To List" className="todoButton" onClick={this.storeItem}/>
+          <input type="submit" value="Add To List" className="todoButton" onClick={this.storeTask}/>
         </div>
         <div className="todoList">
           {this.state.listItems.map((item, index) => (
-            <div className="listItem" key={index}>
-              {item}
+            <div className="listItem" key={index} onClick={this.strikethrough}>
+              {item.taskContent}
             </div>
           ))}
           </div>
