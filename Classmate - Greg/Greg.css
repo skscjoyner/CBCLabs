@@ -1,0 +1,35 @@
+body {
+  background-color: #b3ecff;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.middle {
+  text-align: center;
+}
+
+.navbar {
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.center
+{
+  margin-left: 40%;
+}
+
+li {
+  display: inline;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+.active
+{
+  background-color: green;
+  color: white;
+}
