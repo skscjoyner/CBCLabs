@@ -1,9 +1,9 @@
 class Dog
 {
-  constructor(breed, bark)
+  constructor(breed, fur)
   {
     this._breed = breed;
-    this._bark = bark;
+    this._fur = fur;
   }
 
   get breed(){
@@ -19,11 +19,11 @@ class Dog
     }
   }
 
-  get bark()  {
-    return this._bark;
+  get fur()  {
+    return this._fur;
   }
 
-  speak()
+  bark()
   {
     console.log("I'm barking.");
   }
@@ -31,9 +31,9 @@ class Dog
 
 class BigDog extends Dog
 {
-  constructor(breed, bark, purpose)
+  constructor(breed, fur, purpose)
   {
-    super(breed, bark);
+    super(breed, fur);
     this._purpose = purpose;
   }
 
