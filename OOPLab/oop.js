@@ -1,24 +1,44 @@
-class Dog {// This is the abstract class and will not be called directly.
-  constructor(classGroup, temperament) {
-    this._classGroup = classGroup;
-    this._temperament = temperament;
+class Dog
+{
+  constructor(breed, bark)
+  {
+    this._breed = breed;
+    this._bark = bark;
   }
 
-  get temperament(){// Getter for temperament
-    return this._temperament;
+  get breed(){
+    return this._breed;
+  }
+
+  set breed(value){
+    if(breed == "Pincher") {
+      this._breed = value;
+    }
+    else {
+      console.log("This is one of the scariest dogs!")
+    }
+  }
+
+  get bark()  {
+    return this._bark;
+  }
+
+  speak()
+  {
+    console.log("I'm barking.");
   }
 }
 
-class WorkerGroup extends Dog {//child class. It stores the temperament and returns the job of the
-  constructor(temperament, job){//super constructor stored the classGroup and returns temperament of this._dog
-    super('worker', temperament);
-    this._job = job;
+class BigDog extends Dog
+{
+  constructor(breed, bark, purpose)
+  {
+    super(breed, bark);
+    this._purpose = purpose;
   }
-  print(){//
-    console.log(this._classGroup + ' is a ' + this._job);
+
+  get purpose()
+  {
+    return this._purpose;
   }
 }
-
-// class SportingGroup extends Group {}
-//
-// class WorkingGroup extends Group {}
