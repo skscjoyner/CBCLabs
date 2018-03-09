@@ -1,0 +1,42 @@
+/* This will style the elements with the id=top */
+#top{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+}
+/* This will style the elements with the id=header */
+#header{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 24px;
+    text-align: center;
+}
+/* This will style the elements with the id=board*/
+#board{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 48px;
+    text-align: center;
+}
+/* */
+#guess{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 24px;
+}
+/* */
+#specials{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 24px;
+}
+/* */
+.button{
+    background-color: darkkhaki;
+    font-size: 18px;
+}
