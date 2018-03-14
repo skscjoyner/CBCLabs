@@ -12,6 +12,6 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('storePhoto', 'PhotosController@store');
+Route::post('storePhoto', 'PhotoController@store');
 
 Route::any('{path?}', 'MainController@index')->where("path", ".+");

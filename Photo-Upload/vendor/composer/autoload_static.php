@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6
+class ComposerStaticInit1b0baff9ef5d83cfd970e0d85d675023
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -809,7 +809,7 @@ class ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
-        'Photos' => __DIR__ . '/../..' . '/database/migrations/2018_03_09_185216_photos.php',
+        'Photos' => __DIR__ . '/../..' . '/database/migrations/2018_03_10_054205_photos.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -895,10 +895,10 @@ class ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit406df13aa4cacf5895af34e2e0d9a2c6::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1b0baff9ef5d83cfd970e0d85d675023::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1b0baff9ef5d83cfd970e0d85d675023::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit1b0baff9ef5d83cfd970e0d85d675023::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit1b0baff9ef5d83cfd970e0d85d675023::$classMap;
 
         }, null, ClassLoader::class);
     }

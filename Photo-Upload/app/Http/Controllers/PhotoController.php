@@ -9,7 +9,7 @@ use Purifier;
 
 use App\Photo;
 
-class PhotosController extends Controller
+class PhotoController extends Controller
 {
     public function store(Request $request)
     {
@@ -21,7 +21,7 @@ class PhotosController extends Controller
 
       if($validator->fails())
       {
-        return Response::json(['error' => 'Please fill out all fields']);
+        return Response::json(['error' => 'Please fill out all fields.']);
       }
 
       $photoInput = $request->file('photo');
@@ -30,8 +30,15 @@ class PhotosController extends Controller
 
       $photo = new Photo;
       $photo->photoURL = $request->root(). "/storage/".$photoName;
-      $photo->save();
 
-      return Response::json(['success', 'Your photo was Uploaded.']);
+      $success = $photo->save();
+      if ($success) {
+        return Response::json(['success' => 'Your photo was Uploaded.']);
+      } else {
+        return Response::json(['error' => 'Database errpr please try again.']);
+      }
+
     }
+
+
 }
