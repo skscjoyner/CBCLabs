@@ -53,7 +53,7 @@ export default class NavBar extends React.PureComponent {
           <div className="siteName">Shawn Joyner</div>
 
           <nav className="nav">
-            <Link to="/home" className="navButton">Home</Link>
+            <Link to="/" className="navButton">Home</Link>
             <Link to="/projects" className="navButton">Projects</Link>
             <Link to="/contact" className="navButton">Contact</Link>
             <Link to="/resume" className="navButton">About Me</Link>

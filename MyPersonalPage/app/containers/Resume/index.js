@@ -20,7 +20,7 @@ export default class Resume extends React.PureComponent {
         <Helmet title="Resume" meta={[{ name: 'description', content: 'Description of Resume' }]} />
 
         <NavBar />
-        <h1>Resumé Page</h1>
+        <h1>Who Am I?</h1>
 
       </div>
     );
