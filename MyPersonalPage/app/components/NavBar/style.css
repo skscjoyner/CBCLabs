@@ -31,6 +31,15 @@
   margin-right: 15px;
   font-weight: bold;
   font-variant: small-caps;
+  font-size: 1.2em;
+}
+
+.navButton:hover {
+  background-color: #ddd5d5;
+}
+
+.navButton:active {
+  background-color: #ddd5d5;
 }
 
 .menuIcon {
