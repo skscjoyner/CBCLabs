@@ -1,9 +1,9 @@
 let xhr = new XMLHttpRequest();
 
 function getShows(){
-    var userEntry = document.getElementById("userInput").value; 
-    var moist2 ="https://api.tvmaze.com/search/shows?q="+userEntry;
-    xhr.open('GET', moist2 , true);
+    let userEntry = document.getElementById("userInput").value; 
+    let userQuery ="https://api.tvmaze.com/search/shows?q="+userEntry;
+    xhr.open('GET', userQuery , true);
     console.log("https://api.tvmaze.com/search/shows?q="+userEntry);
     xhr.send();
     xhr.addEventListener("readystatechange", processRequest, false);

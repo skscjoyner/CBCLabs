@@ -8,6 +8,7 @@ import React, {Component} from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from 'containers/Home';
+import Contact from 'containers/Contact'
 import NotFound from 'containers/NotFound';
 
 import './style.css';
@@ -18,6 +19,7 @@ export default class App extends React.Component {
     return (
       <Switch>
         <Route exact path='/' render={() => <Home/>}/>
+        <Route exact path='/contact' render={() => <Contact/>}/>
 
         <Route path='*' render={() => <NotFound/>}/>
       </Switch>

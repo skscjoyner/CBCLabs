@@ -28,6 +28,8 @@
   color: #222222;
   text-decoration: none;
   margin-right: 15px;
+  margin-left: 15px;
+  font-size: 1.3em;
   font-weight: bold;
   font-variant: small-caps;
 }
