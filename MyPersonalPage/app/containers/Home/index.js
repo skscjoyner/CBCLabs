@@ -23,6 +23,7 @@ export default class Home extends React.PureComponent {
         <section className="intro">
           <img src={require("../../images/MySonAndMe.jpg")} alt="My son and me" />
           <div className="">
+            {/* I need to change thie content */}
             <p>I am glad you stopped by to visit. Please take a moment and explore my world.
             Hopefully, you will see something that inspires you.</p>
           </div>
